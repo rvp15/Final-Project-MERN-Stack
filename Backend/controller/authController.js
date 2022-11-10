@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const createToken = (payload) =>{
 return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '30s' })
 }
-
+/////////////////
 const signup = async (req, res, next) => {
   const { username, email, password } = req.body; //destructuring
   try {

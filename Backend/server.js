@@ -5,8 +5,9 @@ require('dotenv').config()
 const mongoConfig = require('./config')
 const { authorizeUser } = require('./middlewareAuth/authMiddleware')
 const cookieParser = require ('cookie-parser')
-
+const cors = require('cors')
 const app = express()
+app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
 //Routes:
